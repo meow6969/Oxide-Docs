@@ -1,6 +1,7 @@
 ---
-sidebar_position: 1
 title: Wisp
+slug: wisp
+description: Wisp is designed to be a low-overhead, easy to implement protocol for proxying multiple TCP and UDP sockets over a single websocket connection.
 ---
 
 ## Wisp Specifications
@@ -133,3 +134,5 @@ The client must establish the connection by performing a standard websocket hand
 Immediately after a websocket connection is established, the server must send a CONTINUE packet containing the initial buffer size for each stream. The stream ID for this packet must be set to 0, which corresponds to the version of the Wisp protocol (0 means Wisp v1). The client must wait for this CONTINUE packet to be received before beginning any communications. The purpose of this packet is to ensure that the client does not have to wait for a CONTINUE packet for the creation of each stream, reducing the overall delay.
 
 The Wisp protocol specifications were written by [@ading2210](https://github.com/ading2210).
+
+#### https://github.com/MercuryWorkshop/wisp-protocol
